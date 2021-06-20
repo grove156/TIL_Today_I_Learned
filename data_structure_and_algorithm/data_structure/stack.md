@@ -1,6 +1,6 @@
 ## Stack
 ### 특징
-* LIFO(Last in First out) 으로 가장 마지막에 들어간 데이터가 먼저 나오는 형삭
+* LIFO(Last in First out)로 가장 마지막에 들어간 데이터가 먼저 나오는 형삭
 * 가장 기본적인 자료구조의 형태
 * 컴퓨터 내부에 callstack(호출스택)이 이와같은 구조로 되어 있기 때문에 마지막에 불려진 함수가 제일 먼저 실해 되게 됨
 * 자바에서는 push(), pop(), peek(), empty(),search()등의 API를 제공함
