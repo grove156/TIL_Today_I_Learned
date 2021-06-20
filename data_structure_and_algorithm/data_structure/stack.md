@@ -10,6 +10,51 @@
     * empty() - 스택이 비어있는지 확인 비어있으면 true
     * search() - 마지막에 들어간 데이터의 인덱스르 반환(없을 경우 -1 라톤)
 ### 직접 구현해본 stack
+**노드 구현**
+```java
+public class Node<T> {
+
+    private T data;
+    private Node prev;
+    private Node next;
+
+    public Node(){};
+
+    public Node(T data){
+        this.data = data;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public Node getPrev() {
+        return prev;
+    }
+
+    public void setPrev(Node prev) {
+        this.prev = prev;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public boolean hasNext(){
+        return next != null;
+    }
+}
+
+```
+
 **인터페이스**
 ```java
 public interface MyStack<T> {

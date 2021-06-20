@@ -12,7 +12,52 @@
     * peek() - poll처럼 데이터를 반환하지만 삭제하지는 않음(없을시 null리턴)
     * element() - peek처럼 데이터를 반환하고 삭제하지 않음(없을시 NoSuchException 발생)
 ### 직접 구현해본 queue
-인터페이스
+**노드 구현**
+```java
+public class Node<T> {
+
+    private T data;
+    private Node prev;
+    private Node next;
+
+    public Node(){};
+
+    public Node(T data){
+        this.data = data;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public Node getPrev() {
+        return prev;
+    }
+
+    public void setPrev(Node prev) {
+        this.prev = prev;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public boolean hasNext(){
+        return next != null;
+    }
+}
+
+```
+
+**인터페이스**
 ```java
 public interface MyQueue<T> {
     public T poll();
@@ -22,7 +67,7 @@ public interface MyQueue<T> {
 
 ```
 
-구현부
+**구현부**
 ```java
 public class MyQueueImpl<T> implements MyQueue<T> {
 
